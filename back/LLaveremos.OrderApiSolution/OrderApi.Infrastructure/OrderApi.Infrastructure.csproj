@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\LLaveremos.SharedLibrarySolution\Llaveremos.SharedLibrary\Llaveremos.SharedLibrary.csproj" />
     <ProjectReference Include="..\OrderApi.Application\OrderApi.Application.csproj" />
   </ItemGroup>
 

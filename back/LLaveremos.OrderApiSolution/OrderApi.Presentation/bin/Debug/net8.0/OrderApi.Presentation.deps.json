@@ -1117,6 +1117,7 @@
       },
       "OrderApi.Infrastructure/1.0.0": {
         "dependencies": {
+          "Llaveremos.SharedLibrary": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "OrderApi.Application": "1.0.0"

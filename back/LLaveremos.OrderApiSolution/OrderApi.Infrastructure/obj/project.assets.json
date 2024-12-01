@@ -3522,6 +3522,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Llaveremos.SharedLibrary >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.0",
       "OrderApi.Application >= 1.0.0"
@@ -3562,6 +3563,9 @@
           "projectReferences": {
             "D:\\Code\\llaveremos\\e-commerce-w-microservices\\back\\LLaveremos.OrderApiSolution\\OrderApi.Application\\OrderApi.Application.csproj": {
               "projectPath": "D:\\Code\\llaveremos\\e-commerce-w-microservices\\back\\LLaveremos.OrderApiSolution\\OrderApi.Application\\OrderApi.Application.csproj"
+            },
+            "D:\\Code\\llaveremos\\e-commerce-w-microservices\\back\\LLaveremos.SharedLibrarySolution\\Llaveremos.SharedLibrary\\Llaveremos.SharedLibrary.csproj": {
+              "projectPath": "D:\\Code\\llaveremos\\e-commerce-w-microservices\\back\\LLaveremos.SharedLibrarySolution\\Llaveremos.SharedLibrary\\Llaveremos.SharedLibrary.csproj"
             }
           }
         }

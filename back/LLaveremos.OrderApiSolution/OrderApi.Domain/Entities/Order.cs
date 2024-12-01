@@ -12,6 +12,6 @@ namespace OrderApi.Domain.Entities
         public int ProductId { get;set; }
         public int ClientId { get; set; }
         public int PurchaseQuantity { get; set; }
-        public DateTime OrderedData { get; set; } = DateTime.Now;    
+        public DateTime OrderedDate { get; set; } = DateTime.Now;    
     }
 }
