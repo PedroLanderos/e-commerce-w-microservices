@@ -42,7 +42,7 @@ namespace Llaveremos.SharedLibrary.DependencyInjection
         public static IApplicationBuilder UseSharedPolicies(this IApplicationBuilder app)
         {
             app.UseMiddleware <GlobalException>();
-            app.UseMiddleware<ListenToApiGateway>();
+           // app.UseMiddleware<ListenToApiGateway>();
             return app;
         }
     }
