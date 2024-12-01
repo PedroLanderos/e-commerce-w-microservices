@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Llaveremos.SharedLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a264dc90ccec86ad5780ef4ff4dd50f2d80beda9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35073a1d1cc81097cd87b7da848decbbd9c482c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Llaveremos.SharedLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Llaveremos.SharedLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
