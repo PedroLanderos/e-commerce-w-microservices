@@ -1,0 +1,16 @@
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\bin\Debug\net8.0\AuthenticationApi.Application.deps.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\bin\Debug\net8.0\AuthenticationApi.Application.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\bin\Debug\net8.0\AuthenticationApi.Application.pdb
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.AssemblyInfoInputs.cache
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.AssemblyInfo.cs
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.csproj.CoreCompileInputs.cache
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.sourcelink.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\refint\AuthenticationApi.Application.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.pdb
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\ref\AuthenticationApi.Application.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\bin\Debug\net8.0\Llaveremos.SharedLibrary.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\bin\Debug\net8.0\Llaveremos.SharedLibrary.pdb
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\AuthenticationApi.Application.csproj.AssemblyReference.cache
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.AuthenticationApi.Solution\AuthenticationApi.Application\obj\Debug\net8.0\Authenti.F26204DC.Up2Date
