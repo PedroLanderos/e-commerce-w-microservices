@@ -1,4 +1,5 @@
 ﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductApi.Application.DTOs;
@@ -10,6 +11,7 @@ namespace ProductApi.Presentation.Controllers
     //El controlador sirve para mandar las solicitudes http previamente definidas por la interfaz e implementadas usando una extension de la interfaz del producto por lo que ahora solamente se llamana a las implementaciones de cada interfaz para obtener una respuesta de la base de datos a traves de un contexto definido
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class ProductsController(IProduct productInterface) : ControllerBase 
     {
         [HttpGet]
@@ -34,6 +36,7 @@ namespace ProductApi.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<Response>> CreateProduct(ProductDTO product)
         {
             if(!ModelState.IsValid)
@@ -45,6 +48,7 @@ namespace ProductApi.Presentation.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> UpdateProduct(ProductDTO product)
         {
             if (!ModelState.IsValid)
@@ -56,6 +60,7 @@ namespace ProductApi.Presentation.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> DeleteProduct(ProductDTO product)
         {
             var getEntity = ProductConversion.ToEntity(product);

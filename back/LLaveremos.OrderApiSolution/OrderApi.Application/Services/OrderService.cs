@@ -23,7 +23,7 @@ namespace OrderApi.Application.Services
         //obtiene el usuario/cliente que hizo la peticion
         public async Task<AppUserDto> GetUser(int userId)
         {
-            var getuser = await httpClient.GetAsync($"/api/products/{userId}");
+            var getuser = await httpClient.GetAsync($"/api/authentication/{userId}");
             if(!getuser.IsSuccessStatusCode)
                 return null!;
 
