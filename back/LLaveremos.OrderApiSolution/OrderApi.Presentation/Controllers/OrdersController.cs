@@ -89,7 +89,5 @@ namespace OrderApi.Presentation.Controllers
             return orderDetail.OrderId > 0 ? Ok(orderDetail) : NotFound("Order not found");
 
         }
-
-
     }
 }

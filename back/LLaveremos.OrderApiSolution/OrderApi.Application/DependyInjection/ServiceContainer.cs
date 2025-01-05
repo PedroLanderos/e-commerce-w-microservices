@@ -42,7 +42,7 @@ namespace OrderApi.Application.DependyInjection
             };
 
             //usar el retry
-            services.AddResiliencePipeline("pipeline-retry", builder =>
+            services.AddResiliencePipeline("retry-pipeline", builder =>
             {
                 builder.AddRetry(retryStrategy);
             });

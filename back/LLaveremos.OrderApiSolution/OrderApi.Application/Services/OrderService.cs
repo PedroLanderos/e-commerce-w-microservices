@@ -35,7 +35,7 @@ namespace OrderApi.Application.Services
 
         public async Task<OrderDetailsDto> GetOrderDetails(int orderId)
         {
-            var order = await orderInterface.FindByIdAsync(orderId);
+            var order = await orderInterface.FindByIdAsync(orderId); 
             if(order is null || order!.Id <= 0)
                 return null!;
 

@@ -22,7 +22,7 @@ namespace AuthenticationApi.Presentation.Controllers
             return result.Flag ? Ok(result) : BadRequest(result);
         }
 
-        [HttpGet("Login")]
+        [HttpPost("Login")]
         public async Task<ActionResult<Response>> Login(LoginDTO loginDTO)
         {
             if(!ModelState.IsValid)
@@ -40,7 +40,9 @@ namespace AuthenticationApi.Presentation.Controllers
                 return BadRequest("invalid id");
             var user = await userInterface.GetUser(id);
 
-            return user.Id > 0 ? Ok(user) : NotFound();
+            if (user is not null) return Ok(user);
+            else return NotFound();
+
         }
     }
 }

@@ -20,34 +20,41 @@ namespace OrderApi.Application.DTOs.Conversions
 
         public static (OrderDto?, IEnumerable<OrderDto>?) FromEntity(Order? order, IEnumerable<Order>? orders)
         {
-            //si solo es una orden
-            if(order is not null || orders is null)
+            // Si es solo una orden
+            if (order is not null && orders is null)
             {
                 var singleOrder = new OrderDto(
-                    order!.Id,
+                    order.Id,
                     order.ClientId,
                     order.ProductId,
                     order.PurchaseQuantity,
-                    order.OrderedDate);
+                    order.OrderedDate
+                );
                 return (singleOrder, null);
             }
-            
-            //si es mas de una orden
-            if(orders is not null || order is null)
-            {
-                var _orders = orders!.Select(
-                    o => new OrderDto(
-                        o.Id,
-                        o.ClientId,
-                        o.ProductId,
-                        o.PurchaseQuantity,
-                        o.OrderedDate
-                        ));
 
+            // Si es más de una orden
+            if (orders is not null && order is null)
+            {
+                if (!orders.Any())
+                {
+                    // Si la colección está vacía, devolvemos una lista vacía
+                    return (null, Enumerable.Empty<OrderDto>());
+                }
+
+                var _orders = orders.Select(o => new OrderDto(
+                    o.Id,
+                    o.ClientId,
+                    o.ProductId,
+                    o.PurchaseQuantity,
+                    o.OrderedDate
+                ));
                 return (null, _orders);
             }
 
+            // Si ambas son nulas o no se aplica ninguna condición
             return (null, null);
         }
-    } 
+
+    }
 }
