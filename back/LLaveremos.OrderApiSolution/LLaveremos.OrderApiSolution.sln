@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApi.Domain", "OrderApi.Domain\OrderApi.Domain.csproj", "{A08563EB-737B-46E6-8E64-61807A264330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApi.Domain", "OrderApi.Domain\OrderApi.Domain.csproj", "{A08563EB-737B-46E6-8E64-61807A264330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApi.Application", "OrderApi.Application\OrderApi.Application.csproj", "{4C6407D1-546E-4184-AB8A-CD8ECB8C97FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApi.Application", "OrderApi.Application\OrderApi.Application.csproj", "{4C6407D1-546E-4184-AB8A-CD8ECB8C97FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApi.Infrastructure", "OrderApi.Infrastructure\OrderApi.Infrastructure.csproj", "{E737DA78-55C3-4960-91E0-6C71C0FFAD68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApi.Infrastructure", "OrderApi.Infrastructure\OrderApi.Infrastructure.csproj", "{E737DA78-55C3-4960-91E0-6C71C0FFAD68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApi.Presentation", "OrderApi.Presentation\OrderApi.Presentation.csproj", "{DEB84AD7-94F4-41B8-A141-BD2F0ED7FA8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApi.Presentation", "OrderApi.Presentation\OrderApi.Presentation.csproj", "{DEB84AD7-94F4-41B8-A141-BD2F0ED7FA8B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Llaveremos.SharedLibrary", "..\LLaveremos.SharedLibrarySolution\Llaveremos.SharedLibrary\Llaveremos.SharedLibrary.csproj", "{E1FBBB1C-81A4-4CBE-82BA-D316542B1A12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F07F2FE5-B179-49B6-94A1-B930AA9A7B53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CA309741-4BF4-4278-BDF8-0AA7646A36F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.OrderApi", "UnitTest.OrderApi\UnitTest.OrderApi.csproj", "{BBDC4075-1568-4202-95B5-13F2FD48A727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +45,21 @@ Global
 		{E1FBBB1C-81A4-4CBE-82BA-D316542B1A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1FBBB1C-81A4-4CBE-82BA-D316542B1A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1FBBB1C-81A4-4CBE-82BA-D316542B1A12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDC4075-1568-4202-95B5-13F2FD48A727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDC4075-1568-4202-95B5-13F2FD48A727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDC4075-1568-4202-95B5-13F2FD48A727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDC4075-1568-4202-95B5-13F2FD48A727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A08563EB-737B-46E6-8E64-61807A264330} = {F07F2FE5-B179-49B6-94A1-B930AA9A7B53}
+		{4C6407D1-546E-4184-AB8A-CD8ECB8C97FC} = {F07F2FE5-B179-49B6-94A1-B930AA9A7B53}
+		{E737DA78-55C3-4960-91E0-6C71C0FFAD68} = {F07F2FE5-B179-49B6-94A1-B930AA9A7B53}
+		{DEB84AD7-94F4-41B8-A141-BD2F0ED7FA8B} = {F07F2FE5-B179-49B6-94A1-B930AA9A7B53}
+		{E1FBBB1C-81A4-4CBE-82BA-D316542B1A12} = {F07F2FE5-B179-49B6-94A1-B930AA9A7B53}
+		{BBDC4075-1568-4202-95B5-13F2FD48A727} = {CA309741-4BF4-4278-BDF8-0AA7646A36F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13C927FA-5DB1-4D4C-A7E5-4B44B74AF181}

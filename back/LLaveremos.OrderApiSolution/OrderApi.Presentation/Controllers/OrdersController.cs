@@ -20,12 +20,11 @@ namespace OrderApi.Presentation.Controllers
         public async Task<ActionResult<IEnumerable<OrderDto>>> GetOrders()
         {
             var orders = await orderInterface.GetAllAsync();
-            if(!orders.Any())
+            if (!orders.Any())
                 return NotFound("No order found");
 
             var (_, list) = OrderConversion.FromEntity(null, orders);
-            return !list!.Any() ? NotFound() : Ok(list);
-
+            return !list!.Any() ? NotFound() : Ok(list.ToList()); // Materializar como lista si eliges la opción b)
         }
 
         [HttpPost]
@@ -43,8 +42,8 @@ namespace OrderApi.Presentation.Controllers
         public async Task<ActionResult<OrderDto>> GetOrder(int id)
         {
             var order = await orderInterface.FindByIdAsync(id);
-            
-            if(order is null)
+
+            if (order is null)
                 return NotFound(null);
 
             var (_order, _) = OrderConversion.FromEntity(order, null);
@@ -54,8 +53,11 @@ namespace OrderApi.Presentation.Controllers
         [HttpPut]
         public async Task<ActionResult<Response>> UpdateOrder(OrderDto orderDto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest("Model is invalid");
+
             var order = OrderConversion.ToEntity(orderDto);
-            var response = await orderInterface.UpdateAsync(order); 
+            var response = await orderInterface.UpdateAsync(order);
 
             return response.Flag ? Ok(response) : BadRequest(response);
         }
@@ -66,11 +68,11 @@ namespace OrderApi.Presentation.Controllers
             var order = OrderConversion.ToEntity(orderDto);
             var response = await orderInterface.DeleteAsync(order);
 
-            return response.Flag ? Ok(response) : BadRequest(response); 
+            return response.Flag ? Ok(response) : BadRequest(response);
         }
 
         [HttpGet("client/{clientId:int}")]
-        public async Task<ActionResult<OrderDto>> GetClientOrders(int clientId)
+        public async Task<ActionResult<IEnumerable<OrderDto>>> GetClientOrders(int clientId)
         {
             if (clientId <= 0)
                 return BadRequest("Invalid id");
@@ -82,12 +84,14 @@ namespace OrderApi.Presentation.Controllers
         [HttpGet("details/{orderId:int}")]
         public async Task<ActionResult<OrderDetailsDto>> GetOrderDetails(int orderId)
         {
-            if (orderId <= 0) 
+            if (orderId <= 0)
                 return BadRequest("Invalid id");
 
             var orderDetail = await orderService.GetOrderDetails(orderId);
-            return orderDetail.OrderId > 0 ? Ok(orderDetail) : NotFound("Order not found");
+            if (orderDetail == null || orderDetail.OrderId <= 0)
+                return NotFound("Order not found");
 
+            return Ok(orderDetail);
         }
     }
 }
