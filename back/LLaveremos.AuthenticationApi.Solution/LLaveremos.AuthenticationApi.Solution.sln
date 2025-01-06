@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationApi.Domain", "AuthenticationApi.Domain\AuthenticationApi.Domain.csproj", "{7E2ED392-FB58-4DF4-93C2-0F942BF375EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationApi.Domain", "AuthenticationApi.Domain\AuthenticationApi.Domain.csproj", "{7E2ED392-FB58-4DF4-93C2-0F942BF375EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationApi.Application", "AuthenticationApi.Application\AuthenticationApi.Application.csproj", "{2A32641C-EF8E-419A-8CBE-A7A6098D5A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationApi.Application", "AuthenticationApi.Application\AuthenticationApi.Application.csproj", "{2A32641C-EF8E-419A-8CBE-A7A6098D5A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationApi.Infrastructure", "AuthenticationApi.Infrastructure\AuthenticationApi.Infrastructure.csproj", "{ADABAF02-EB26-4CE7-8FAB-73AFAA7B4C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationApi.Infrastructure", "AuthenticationApi.Infrastructure\AuthenticationApi.Infrastructure.csproj", "{ADABAF02-EB26-4CE7-8FAB-73AFAA7B4C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationApi.Presentation", "AuthenticationApi.Presentation\AuthenticationApi.Presentation.csproj", "{3BCD0E24-01EA-41D9-81FC-0D89FFA7B0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationApi.Presentation", "AuthenticationApi.Presentation\AuthenticationApi.Presentation.csproj", "{3BCD0E24-01EA-41D9-81FC-0D89FFA7B0D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Llaveremos.SharedLibrary", "..\LLaveremos.SharedLibrarySolution\Llaveremos.SharedLibrary\Llaveremos.SharedLibrary.csproj", "{8CF359C2-7B89-4D92-AA86-F8B66EC18142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F069A24F-2590-4E47-8358-92E087E7C994}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F03308FA-607E-4CD7-B26E-5C742B488419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.AuthenticationApi", "UnitTest.AuthenticationApi\UnitTest.AuthenticationApi.csproj", "{2178A101-6438-4DB7-8E89-8ADCEAFC8CEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +45,21 @@ Global
 		{8CF359C2-7B89-4D92-AA86-F8B66EC18142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF359C2-7B89-4D92-AA86-F8B66EC18142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF359C2-7B89-4D92-AA86-F8B66EC18142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2178A101-6438-4DB7-8E89-8ADCEAFC8CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2178A101-6438-4DB7-8E89-8ADCEAFC8CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2178A101-6438-4DB7-8E89-8ADCEAFC8CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2178A101-6438-4DB7-8E89-8ADCEAFC8CEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E2ED392-FB58-4DF4-93C2-0F942BF375EA} = {F069A24F-2590-4E47-8358-92E087E7C994}
+		{2A32641C-EF8E-419A-8CBE-A7A6098D5A41} = {F069A24F-2590-4E47-8358-92E087E7C994}
+		{ADABAF02-EB26-4CE7-8FAB-73AFAA7B4C5E} = {F069A24F-2590-4E47-8358-92E087E7C994}
+		{3BCD0E24-01EA-41D9-81FC-0D89FFA7B0D9} = {F069A24F-2590-4E47-8358-92E087E7C994}
+		{8CF359C2-7B89-4D92-AA86-F8B66EC18142} = {F069A24F-2590-4E47-8358-92E087E7C994}
+		{2178A101-6438-4DB7-8E89-8ADCEAFC8CEB} = {F03308FA-607E-4CD7-B26E-5C742B488419}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4992FC72-D5A9-48EE-ACB7-E89CF157E2A0}
