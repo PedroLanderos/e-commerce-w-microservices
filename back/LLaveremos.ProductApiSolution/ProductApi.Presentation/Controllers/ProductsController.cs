@@ -24,6 +24,22 @@ namespace ProductApi.Presentation.Controllers
             return list!.Any() ? Ok(list) : NotFound("No product found");
         }
 
+        [HttpGet("available")]
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAvailableProducts()
+        {
+            var products = await productInterface.GetAllAsync();
+
+            // Filtrar productos con cantidad mayor a 0
+            var availableProducts = products.Where(product => product.Quantity > 0);
+
+            if (!availableProducts.Any())
+                return NotFound("No hay productos disponibles.");
+
+            var (_, productDtos) = ProductConversion.FromEntity(null!, availableProducts.ToList());
+
+            return Ok(productDtos);
+        }
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<ProductDTO>> GetProduct(int id)
         {
@@ -48,7 +64,6 @@ namespace ProductApi.Presentation.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> UpdateProduct(ProductDTO product)
         {
             if (!ModelState.IsValid)
@@ -67,5 +82,6 @@ namespace ProductApi.Presentation.Controllers
             var response = await productInterface.DeleteAsync(getEntity);
             return response.Flag is true ? Ok(response) : BadRequest(response);
         }
+
     }
 }

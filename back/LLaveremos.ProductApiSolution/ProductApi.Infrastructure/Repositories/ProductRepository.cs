@@ -123,7 +123,7 @@ namespace ProductApi.Infrastructure.Repositories
             {
                 LogException.LogExceptions(ex);
 
-                return new Response(false, "Error, the product was could not be updated.");
+                return new Response(false, "Error, the product was not updated.");
             }
         }
     }

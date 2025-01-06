@@ -1,7 +1,5 @@
 {
   "Routes": [
-
-    //jwt authentication
     {
       "DownstreamPathTemplate": "/api/authentication/{everything}",
       "DownstreamScheme": "http",
@@ -12,17 +10,8 @@
         }
       ],
       "UpstreamPathTemplate": "/api/authentication/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
-      "RateLimitOptions": {
-        "ClientWhitelist": [],
-        "EnableRateLimiting": true,
-        "Period": "60s",
-        "Limit": 1,
-        "PeriodTimespan": 10
-      }
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     },
-    //product api
-    //get method
     {
       "DownstreamPathTemplate": "/api/products",
       "DownstreamScheme": "http",
@@ -33,15 +22,20 @@
         }
       ],
       "UpstreamPathTemplate": "/api/products",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "default",
-        "Header": "llaveremos-Caching-Control"
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
-
-    //get product by id
+    {
+      "DownstreamPathTemplate": "/api/products/available",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/products/available",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
     {
       "DownstreamPathTemplate": "/api/products/{id}",
       "DownstreamScheme": "http",
@@ -52,15 +46,8 @@
         }
       ],
       "UpstreamPathTemplate": "/api/products/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "default",
-        "Header": "llaveremos-Caching-Control"
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
-
-    //product post put delete
     {
       "DownstreamPathTemplate": "/api/products/{everything}",
       "DownstreamScheme": "http",
@@ -77,8 +64,6 @@
         "AllowedScopes": []
       }
     },
-    //Order
-    //get
     {
       "DownstreamPathTemplate": "/api/orders",
       "DownstreamScheme": "http",
@@ -90,17 +75,11 @@
       ],
       "UpstreamPathTemplate": "/api/orders",
       "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "default",
-        "Header": "llaveremos-Caching-Control"
-      },
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
     },
-    //get order by id
     {
       "DownstreamPathTemplate": "/api/orders/{id}",
       "DownstreamScheme": "http",
@@ -112,17 +91,11 @@
       ],
       "UpstreamPathTemplate": "/api/orders/{id}",
       "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "default",
-        "Header": "llaveremos-Caching-Control"
-      },
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
     },
-    //post put delete
     {
       "DownstreamPathTemplate": "/api/orders/{everything}",
       "DownstreamScheme": "http",
@@ -141,9 +114,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5003",
-    "RateLimitsOptions": {
-      "QuotaExceededMessage": "Those are a lot of request, stop!"
-    }
+    "BaseUrl": "https://localhost:5003"
   }
 }

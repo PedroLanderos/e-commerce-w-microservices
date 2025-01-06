@@ -49,21 +49,23 @@ namespace AuthenticationApi.Infrastructure.Repositories
             var key = Encoding.UTF8.GetBytes(config.GetSection("Authentication:Key").Value!);
             var securityKey = new SymmetricSecurityKey(key);
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var claims = new List<Claim> { 
-                new (ClaimTypes.Name, user.Name!), 
-                new (ClaimTypes.Email, user.Email!
-                )};
+            var claims = new List<Claim>
+    {
+        new(ClaimTypes.Name, user.Name!),
+        new(ClaimTypes.Email, user.Email!),
+        new("UserId", user.Id.ToString()) // Agrega el userId como claim
+    };
 
-            if(!string.IsNullOrEmpty(user.Role) || !Equals("string", user.Role))
+            if (!string.IsNullOrEmpty(user.Role) && !Equals("string", user.Role))
                 claims.Add(new(ClaimTypes.Role, user.Role!));
 
             var token = new JwtSecurityToken(
                 issuer: config["Authentication:Issuer"],
                 audience: config["Authentication:Audience"],
                 claims: claims,
-                expires: null,
+                expires: DateTime.UtcNow.AddHours(1), // Ajusta la expiración según sea necesario
                 signingCredentials: credentials
-                );
+            );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

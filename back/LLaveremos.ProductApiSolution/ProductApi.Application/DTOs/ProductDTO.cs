@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 namespace ProductApi.Application.DTOs
 {
     public record ProductDTO(int Id,
-        [Required] string Name, [Required, Range(1, int.MaxValue)] int Quantity,
+        [Required] string Name, [Required, Range(0, int.MaxValue)] int Quantity,
         [Required, DataType(DataType.Currency)] decimal Price);
 }

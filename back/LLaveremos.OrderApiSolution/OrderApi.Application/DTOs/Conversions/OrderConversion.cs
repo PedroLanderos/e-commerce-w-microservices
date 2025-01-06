@@ -12,8 +12,8 @@ namespace OrderApi.Application.DTOs.Conversions
         public static Order ToEntity(OrderDto order) => new()
         {
             Id = order.Id,
-            ClientId = order.ClientId,
             ProductId = order.ProductId,
+            ClientId = order.ClientId,
             OrderedDate = order.OrderedDate,
             PurchaseQuantity = order.PurchaseQuantity
         };
@@ -25,8 +25,8 @@ namespace OrderApi.Application.DTOs.Conversions
             {
                 var singleOrder = new OrderDto(
                     order.Id,
-                    order.ClientId,
                     order.ProductId,
+                    order.ClientId,
                     order.PurchaseQuantity,
                     order.OrderedDate
                 );
@@ -44,8 +44,8 @@ namespace OrderApi.Application.DTOs.Conversions
 
                 var _orders = orders.Select(o => new OrderDto(
                     o.Id,
-                    o.ClientId,
                     o.ProductId,
+                    o.ClientId,
                     o.PurchaseQuantity,
                     o.OrderedDate
                 ));
