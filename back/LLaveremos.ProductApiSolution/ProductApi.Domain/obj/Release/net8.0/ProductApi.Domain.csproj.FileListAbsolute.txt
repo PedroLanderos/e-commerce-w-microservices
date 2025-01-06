@@ -1,0 +1,12 @@
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\bin\Release\net8.0\ProductApi.Domain.deps.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\bin\Release\net8.0\ProductApi.Domain.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\bin\Release\net8.0\ProductApi.Domain.pdb
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.AssemblyInfoInputs.cache
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.AssemblyInfo.cs
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.csproj.CoreCompileInputs.cache
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.sourcelink.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\refint\ProductApi.Domain.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ProductApi.Domain.pdb
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Domain\obj\Release\net8.0\ref\ProductApi.Domain.dll

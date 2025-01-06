@@ -154,3 +154,8 @@ D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution
 D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\obj\Debug\net8.0\ProductApi.Presentation.pdb
 D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\obj\Debug\net8.0\ProductApi.Presentation.genruntimeconfig.cache
 D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\obj\Debug\net8.0\ref\ProductApi.Presentation.dll
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\bin\Debug\net8.0\publish\web.config
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\bin\Debug\net8.0\publish\appsettings.Development.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\bin\Debug\net8.0\publish\appsettings.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\bin\Debug\net8.0\publish\ProductApi.Presentation.deps.json
+D:\Code\llaveremos\e-commerce-w-microservices\back\LLaveremos.ProductApiSolution\ProductApi.Presentation\bin\Debug\net8.0\publish\ProductApi.Presentation.runtimeconfig.json

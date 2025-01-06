@@ -90,6 +90,36 @@ namespace AuthenticationApi.Infrastructure.Repositories
             await context.SaveChangesAsync();
             return result.Entity.Id > 0 ? new Response(true, "User registered") : 
                 new Response(false, "Invalid data");  
-        } 
+        }
+
+        public async Task<IEnumerable<GetUserDTO>> GetAllUsers()
+        {
+            var users = await context.Users.ToListAsync();
+            return users.Select(user => new GetUserDTO(
+                    user.Id, user.Name!, user.TelephoneNumber!, user.Adress!, user.Email!, user.Role!
+                ));
+        }
+
+        public async Task<Response> EditUserById(AppUserDTO appUserDTO)
+        {
+            var user = await context.Users.FindAsync(appUserDTO.Id);
+            if (user is null)
+                return new Response(false, "User not found");
+
+            user.Name = appUserDTO.Name;
+            user.TelephoneNumber = appUserDTO.TelephoneNumber;
+            user.Adress = appUserDTO.Address;
+            user.Email = appUserDTO.Email;
+            user.Role = appUserDTO.Role;
+            if (!string.IsNullOrEmpty(appUserDTO.Password))
+            {
+                user.Password = BCrypt.Net.BCrypt.HashPassword(appUserDTO.Password);
+            }
+
+            context.Users.Update(user);
+            await context.SaveChangesAsync();
+
+            return new Response(true, "User updated successfully");
+        }
     }
 }

@@ -8,5 +8,7 @@ namespace AuthenticationApi.Application.Interfaces
         Task<Response> Register(AppUserDTO appUserDTO);
         Task<Response> Login(LoginDTO loginDTO);
         Task<GetUserDTO> GetUser(int userId);
+        Task<IEnumerable<GetUserDTO>> GetAllUsers();
+        Task<Response> EditUserById(AppUserDTO appUserDTO);
     }
 }

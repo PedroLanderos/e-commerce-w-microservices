@@ -44,5 +44,27 @@ namespace AuthenticationApi.Presentation.Controllers
             else return NotFound();
 
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<IEnumerable<GetUserDTO>>> GetAllUsers()
+        {
+            var users = await userInterface.GetAllUsers();
+            return users.Any() ? Ok(users) : NotFound("No users found");
+        }
+
+        [HttpPut]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<Response>> EditUser(AppUserDTO appUserDTO)
+        {
+            if (appUserDTO.Id <= 0)
+                return BadRequest("Invalid user ID");
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await userInterface.EditUserById(appUserDTO);
+            return result.Flag ? Ok(result) : BadRequest(result);
+        }
     }
 }
