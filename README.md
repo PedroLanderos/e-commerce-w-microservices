@@ -1,24 +1,70 @@
-This document outlines the structure and development workflow of our application, detailing each major component and implementation stage.
+# 🛒 Sistema de E-Commerce - Llaveremos
 
-1. Repository & CI/CD Configuration
-1.1 GitHub Repository Setup: Set up the repositories in GitHub, organizing branches and setting up repository guidelines.
-1.2 CI/CD Pipeline Setup: Configure Azure DevOps or GitHub Actions to automate the continuous integration and delivery (CI/CD) pipeline for streamlined deployments.
-2. Backend Service Development
-2.1 API Gateway: Initialize and configure the API Gateway, defining routes and ensuring secure communication between services.
-2.2 Authentication Service: Build a dedicated authentication service to manage user access and security protocols.
-2.3 Product Catalog Service: Implement a service responsible for handling product catalog data and operations.
-2.4 Shopping Cart Service: Develop the shopping cart service, allowing users to add, remove, and manage items in their carts.
-3. Frontend Development
-3.1 Project Initialization in React: Set up the React project and define the initial folder structure and dependencies.
-3.2 Authentication Implementation: Integrate the frontend authentication components, allowing users to sign up, log in, and manage their sessions.
-3.3 Product Catalog UI: Build the product catalog interface, enabling users to browse, search, and view products.
-3.4 Shopping Cart UI: Implement the shopping cart functionality, allowing users to manage items and view their current cart contents.
-4. Testing & Optimization
-4.1 Automated Testing: Implement automated tests across both frontend and backend, ensuring consistent quality and reliability.
-4.2 Performance Optimization: Conduct performance tuning to enhance the responsiveness and scalability of the application.
-5. Final Configuration & Deployment
-5.1 Environment Configuration: Finalize and configure deployment environments for production, staging, and development.
-5.2 Final Deployment: Deploy the completed application to production and perform post-deployment checks.
-6. Monitoring & Future Development
-6.1 Monitoring and Troubleshooting: Set up monitoring to detect and respond to issues, with alerts for system health and key metrics.
-6.2 New Feature Implementation: Begin iterative development of new features based on user feedback and business requirements.
+Este proyecto es una solución de e-commerce basada en microservicios, desarrollada con .NET 8 y siguiendo principios de Clean Architecture. Cada servicio se encuentra desacoplado, con responsabilidad única, y cuenta con sus propias pruebas unitarias. Además, el sistema incluye una colección de Postman para facilitar las pruebas manuales de las APIs.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```plaintext
+Llaveremos.ApiGatewaySolution
+Llaveremos.AuthenticationApi.Solution
+Llaveremos.OrderApiSolution
+Llaveremos.ProductApiSolution
+Llaveremos.SharedLibrarySolution
+```
+
+---
+
+## ⚙️ Tecnologías Utilizadas
+
+- .NET 8
+- ASP.NET Core Web API
+- Clean Architecture
+  - Domain
+  - Application
+  - Infrastructure
+  - Presentation
+- JWT para autenticación
+- Pruebas unitarias en cada microservicio
+- Postman (colección de pruebas de endpoints)
+
+---
+
+## 🧱 Descripción de Microservicios
+
+### 🔐 Authentication API
+Encargado de la autenticación de usuarios y generación de tokens JWT.
+
+### 📦 Product API
+Gestión de productos: creación, edición, eliminación y listado.
+
+### 📑 Order API
+Procesamiento de pedidos realizados por los usuarios.
+
+### 🌐 API Gateway
+Punto de entrada unificado al sistema para enrutar las solicitudes a los microservicios correspondientes.
+
+### 🧰 Shared Library
+Contiene componentes reutilizables como modelos, constantes, interfaces, excepciones, etc.
+
+---
+
+## 🧪 Pruebas
+
+Cada microservicio cuenta con su propio conjunto de pruebas unitarias para asegurar el correcto funcionamiento de su lógica interna.
+
+Además, se incluye una colección de Postman para probar manualmente los endpoints disponibles.
+
+---
+
+## 📂 Organización del Código
+
+Cada microservicio sigue el patrón de **Clean Architecture**, con la siguiente estructura de carpetas:
+
+- `Domain`: Entidades y lógica de negocio pura
+- `Application`: Casos de uso, DTOs, interfaces de servicios
+- `Infrastructure`: Implementaciones técnicas (bases de datos, servicios externos)
+- `Presentation`: Controladores, endpoints y validaciones
+
+
